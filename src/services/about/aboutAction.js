@@ -1,0 +1,1 @@
+export const getNewsAbout = () => ({type: 'GET_NEWS_ABOUT'})

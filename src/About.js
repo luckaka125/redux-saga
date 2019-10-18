@@ -4,10 +4,9 @@ import { render } from 'react-dom';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import { logger } from 'redux-logger';
-import reducer from './services/blogs/blogsReducer';
-import App from './components/App';
+import reducer from '../services/about/aboutReducer';
+import rootSaga from '../services/about/aboutSaga';
 import About from './components/About';
-import rootSaga from './services/blogs/blogsSaga';
 import {
    BrowserRouter,
    Route,
@@ -24,7 +23,7 @@ render(
    <Provider store={store}>
       <BrowserRouter>
       <div>
-         <Route path="/" component={App}/>
+         <Route path="/about" component={About}/>
       </div>
       </BrowserRouter>
    </Provider>,
