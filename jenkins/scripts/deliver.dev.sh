@@ -13,7 +13,3 @@ pip3 install awscli --upgrade --user
 
 # aws copy new IMA data to S3
 /usr/local/bin/aws s3 cp dist s3://luckaka125 --recursive
-
-# create invalidate IMA cloudfront
-/usr/local/bin/aws configure set preview.cloudfront true
-/usr/local/bin/aws cloudfront create-invalidation --distribution-id E1JKMRHLOA216A --path /*
